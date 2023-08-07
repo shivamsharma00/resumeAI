@@ -6,13 +6,13 @@ from PyQt6.QtGui import QGuiApplication
 from PyQt6.QtQml import QQmlApplicationEngine
 from PyQt6.QtQuick import QQuickWindow
 from PyQt6.QtWidgets import QApplication, QDialog, QFormLayout
-from PyQt6.QtWidgets import (QPushButton, QLineEdit, QPlainTextEdit)
+from PyQt6.QtWidgets import (QPushButton, QLineEdit, QPlainTextEdit, QLabel)
 from PyQt6.QtCore import QObject, QUrl, pyqtSignal, pyqtSlot, QThread
-
+from docEditor import DocEditor
 
 
 # Your OPENAI_API_KEY
-openai.api_key = "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"
+openai.api_key = ""
 prompt_text = pd.read_csv("prompt.csv", encoding="cp1252")
 # job_text["prompt1"][0] - first part of prompt
 # job_text["prompt2"][0] - second part of prompt
@@ -32,6 +32,12 @@ class Form(QDialog):
     def __init__(self, parent=None):
         super(Form, self).__init__(parent)
 
+        self.company_name = ""
+        self.label = QLabel("Company Name:")
+        self.company_text_box = QLineEdit()
+        self.jd_label = QLabel("Job Description:")
+
+
         self.le = QPlainTextEdit()
         self.le.setObjectName("host")
         # self.le.setText("Host")
@@ -42,6 +48,9 @@ class Form(QDialog):
         self.pb.clicked.connect(self.button_click)
 
         layout = QFormLayout()
+        layout.addWidget(self.label)
+        layout.addWidget(self.company_text_box)
+        layout.addWidget(self.jd_label)
         layout.addWidget(self.le)
         layout.addWidget(self.pb)
         self.setLayout(layout)
@@ -63,18 +72,25 @@ class Form(QDialog):
         )
         return response.choices[0].message.content
 
-    def make_resume(self, jd):
+    def get_resume(self, update_resume):
+        doc = DocEditor(update_resume)
+        doc.run(self.company_name)
+
+    def get_prompt(self, jd):
         # This function takes job description and makes a resume according to it.
         # jd - job description
         # resume - resume
         prompt = PROMPT1 + jd + PROMPT2
+        QApplication.processEvents()
         resume = self.get_gpt_response(prompt)
-        self.le.setPlainText(resume)
+        self.get_resume(resume)
+        self.le.setPlainText(prompt + resume)
 
     def button_click(self):
         # jd(job description) is a QString object
         jd = self.le.toPlainText()
-        self.make_resume(jd)
+        self.company_name = self.company_text_box.text()
+        self.get_prompt(jd)
 
     
 if __name__ == '__main__':
