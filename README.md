@@ -5,7 +5,7 @@ Hey there! Just got a new job application that you need to build a resume for? I
 
 Here's how it works:
 
-![resume/jpg.png](placeholder_for_image)
+![resume/img.jpg](placeholder_for_image)
 
 We'll be working with a predefined format of a resume and then employ chatGPT-4 for generating the job description and the key skills. Once everything is done, the updated resume will be saved as a pdf - neat, right?
 
