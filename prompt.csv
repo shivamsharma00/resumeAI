@@ -1,5 +1,5 @@
 prompt1,prompt2
-"Objective:I would like to update my resume to align my skills, professional experience, and academic projects with the job description. Please make the necessary changes and additions to optimize my resume for this role and incorporate the most important keywords from the job description in my achievements. Job Description:","Resume:
+"Objective:I would like to update my resume to align my skills and professional experience with the job description. Please make the necessary changes and additions to optimize my resume for this role and incorporate the most important keywords from the job description in my achievements. Job Description:","Resume:
 Shivam Sharma
 Machine Learning Engineer
 Clayton, California � +1 602-487-9993 � sharma.shivam3242@gmail.com � linkedin.com/in/shivamsharma00 � Portfolio: galeetch.com
@@ -25,27 +25,6 @@ May 2023
 Rajasthan Technical University, Jaipur, IN
 Bachelor of Technology � Computer Science & Engineering
 May 2021
-ACADEMIC PROJECTS
-
-Authorship Obfuscation
-Aug 2022 � Dec 2022
-� Constructed ensemble architecture of SVM classifiers for attribute classification, with writeprint features and word2vec model.
-� Tuned hyperparameters for MUTANT-X obfuscator and accomplish 0.5 increase in baseline METEOR score with amazon review dataset.
-
-Bi-Directional Search
-Aug 2022 � Dec 2022
-� Demonstrated proficiency in utilizing heuristic functions to optimize bidirectional search algorithms and find optimal paths efficiently in complex search spaces.
-� Collaborated to accomplish bidirectional search algorithm Meet in middle, and tested effectiveness in Pacman Game environment with ANOVA and T Test.
-
-Proximal Training for GANs
-Jan 2022 � May 2022
-� Research GAN's and devised proximal training for Wasserstein GAN producing images with 20% higher inception score than normal images.
-� Constructed 2 CNN's and image processing algorithms for proximal training with celeb face dataset, and extensive study on WGAN-GP, WGAN-WC, and vanilla GAN.
-
-Machine Learning Model Search
-Jan 2022 � May 2022
-� Built a platform to reduce dataset storage and model reuse using MinHash and compressed data sketch algorithms creating vector-based histograms achieving 93% adaptivity.
-� Tested platform with CINIC-10 dataset, comprising 270k images from CIFAR-10 and ImageNet, to create multivariate probability distributions of training data, achieving a mean accuracy of 80% in similarity search between models.
 
 Specific Instructions:
 
@@ -53,8 +32,6 @@ Skills Alignment: Identify the skills mentioned in the job description and add t
 
 Professional Experience: Adjust the descriptions of my previous job roles to better match the responsibilities and requirements outlined in the job description. Emphasize achievements and experiences that are most relevant to the new role. Write 6 points for this section.
 
-Academic Projects: Revise the descriptions of my academic projects to align with the requirements and qualifications sought in the job description. Highlight any technical expertise or problem-solving abilities demonstrated during these projects that are relevant to the new role. Write two points for each project and keep the length od points same as resume points.
-
-Please ensure that the changes made to my resume maintain a professional tone, proper grammar, and accurate representation of my qualifications and experiences. Write only the Professional Experience, Skills, and Academic Projects sections. Do not write any other section. Add 10 most important keywords from the job description into my resume.
+Please ensure that the changes made to my resume maintain a professional tone, proper grammar, and accurate representation of my qualifications and experiences. Write only the Professional Experience, and Skills sections. Do not write any other section. Add 10 most important keywords from the job description into my resume.
 
 Thank you for your assistance in optimizing my resume for this specific job opportunity."

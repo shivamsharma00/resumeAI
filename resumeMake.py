@@ -9,8 +9,10 @@ from PyQt6.QtWidgets import QApplication, QDialog, QFormLayout
 from PyQt6.QtWidgets import (QPushButton, QLineEdit, QPlainTextEdit)
 from PyQt6.QtCore import QObject, QUrl, pyqtSignal, pyqtSlot, QThread
 
+
+
 # Your OPENAI_API_KEY
-openai.api_key = ""
+openai.api_key = "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"
 prompt_text = pd.read_csv("prompt.csv", encoding="cp1252")
 # job_text["prompt1"][0] - first part of prompt
 # job_text["prompt2"][0] - second part of prompt
@@ -23,7 +25,10 @@ PROMPT2 = prompt_text["prompt2"][0]
 #     def run(self):
 #         "Long running tasks"
 
+
 class Form(QDialog):
+    
+    
     def __init__(self, parent=None):
         super(Form, self).__init__(parent)
 
@@ -56,7 +61,6 @@ class Form(QDialog):
           frequency_penalty=0,
           presence_penalty=0,
         )
-
         return response.choices[0].message.content
 
     def make_resume(self, jd):
@@ -74,7 +78,6 @@ class Form(QDialog):
 
     
 if __name__ == '__main__':
-    
     QQuickWindow.setSceneGraphBackend('software')
     app = QApplication(sys.argv)
     form = Form()
